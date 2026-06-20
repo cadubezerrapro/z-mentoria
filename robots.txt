@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Bloqueia crawlers de arquivos sensíveis
+Disallow: /.htaccess
+Disallow: /_headers
+Disallow: /css/
+Disallow: /images/design-mode/
+
+Sitemap: https://seudominio.com.br/sitemap.xml

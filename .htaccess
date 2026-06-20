@@ -1,0 +1,70 @@
+# ============================================================
+# SECURITY HEADERS
+# ============================================================
+
+<IfModule mod_headers.c>
+  # Bloqueia clickjacking — ninguém pode iframear sua LP
+  Header always set X-Frame-Options "DENY"
+
+  # Impede MIME sniffing — browser respeita o Content-Type declarado
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Controle de referrer — não vaza URL para terceiros
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Desabilita features de browser que você não usa
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+
+  # Content Security Policy — só carrega scripts de origens conhecidas
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.utmify.com.br; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://cdn.utmify.com.br; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';"
+
+  # Remove informações do servidor
+  Header always unset X-Powered-By
+  Header always unset Server
+</IfModule>
+
+# ============================================================
+# HTTPS FORÇADO
+# ============================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ============================================================
+# PROTEÇÕES GERAIS
+# ============================================================
+
+# Sem listagem de diretórios
+Options -Indexes
+
+# Bloqueia acesso a arquivos ocultos (.htaccess, .env, etc.)
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Bloqueia acesso direto a arquivos sensíveis
+<FilesMatch "\.(env|log|sh|bak|sql|gz|tar)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# ============================================================
+# CACHE
+# ============================================================
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # HTML — sem cache (atualiza sempre)
+  ExpiresByType text/html "access plus 0 seconds"
+  # Assets estáticos — cache longo
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>

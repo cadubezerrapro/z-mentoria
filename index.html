@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <!-- SECURITY HEADERS -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.utmify.com.br; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://cdn.utmify.com.br; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';"/>
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Underground Global Player | Cadu Bezerra</title>
+  <meta name="description" content="Acesso direto à estrutura que uso para escalar múltiplos 6 dígitos vendendo low ticket no Brasil e em Euro/Dólar."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Underground Global Player | Cadu Bezerra"/>
+  <meta property="og:description" content="Acesso direto à estrutura que uso para escalar múltiplos 6 dígitos vendendo low ticket no Brasil e em Euro/Dólar."/>
+  <meta property="og:image" content="cadudoblack-devices-mockup.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="shortcut icon" href="cadudoblack-favicon.png"/>
+  <link rel="icon" href="cadudoblack-favicon.png"/>
+  <link rel="apple-touch-icon" href="cadudoblack-favicon.png"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script>
+    window.pixelId = "68c61f6ea983bb67b8e00765";
+    var a = document.createElement("script");
+    a.setAttribute("async","");
+    a.setAttribute("defer","");
+    a.setAttribute("src","https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+  <script async defer src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck="true" data-utmify-prevent-subids="true"></script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#fff;color:#111;}
+
+    /* ANIMATIONS */
+    [data-fade]{opacity:0;transform:translateY(36px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+    [data-fade].visible{opacity:1;transform:translateY(0);}
+    [data-fade][data-delay="1"]{transition-delay:.1s;}
+    [data-fade][data-delay="2"]{transition-delay:.2s;}
+    [data-fade][data-delay="3"]{transition-delay:.3s;}
+    [data-fade][data-delay="4"]{transition-delay:.4s;}
+    [data-fade][data-delay="5"]{transition-delay:.5s;}
+
+    /* HERO */
+    .hero-bg{background:#000;position:relative;overflow:hidden;padding:52px 20px 60px;}
+    .hero-glow{position:absolute;top:-160px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(34,197,94,.18) 0%,transparent 60%);pointer-events:none;animation:glow-pulse 5s ease-in-out infinite;}
+    @keyframes glow-pulse{0%,100%{opacity:.7;transform:translateX(-50%) scale(1);}50%{opacity:1;transform:translateX(-50%) scale(1.08);}}
+    .hero-title{font-size:clamp(1.3rem,3.2vw,1.5rem);font-weight:900;line-height:1.12;color:#fff;letter-spacing:-.02em;margin-bottom:20px;}
+    .hero-title .accent{color:#22c55e;}
+    .hero-sub{font-size:.95rem;color:rgba(255,255,255,.6);max-width:480px;margin:0 auto 28px;line-height:1.65;}
+
+    /* BANNER */
+    .top-banner{background:#15803d;padding:11px 16px;text-align:center;font-weight:700;color:#fff;font-size:.85rem;letter-spacing:.01em;}
+
+    /* STATS */
+    .stats-bar{background:#fff;border-bottom:1px solid #f0f0f0;}
+    .stats-inner{display:grid;grid-template-columns:repeat(3,1fr);max-width:480px;margin:0 auto;}
+    .stat-cell{padding:20px 8px;text-align:center;border-right:1px solid #f3f4f6;}
+    .stat-cell:last-child{border-right:none;}
+    .stat-num{display:block;font-size:clamp(1.2rem,5vw,1.8rem);font-weight:900;color:#22c55e;line-height:1;}
+    .stat-lbl{font-size:.65rem;color:#9ca3af;margin-top:5px;font-weight:500;}
+
+    /* SECTION HELPERS */
+    .sec{padding:52px 16px;}
+    .sec-inner{max-width:480px;margin:0 auto;}
+    .sec-inner-sm{max-width:480px;margin:0 auto;}
+    .sec-tag{display:inline-block;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:100px;padding:4px 14px;font-size:.72rem;font-weight:700;color:#15803d;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+    .sec-tag-dark{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3);color:#4ade80;}
+    .sec-title{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;color:#111;line-height:1.15;letter-spacing:-.02em;margin-bottom:10px;}
+    .sec-title-white{color:#fff;}
+    .sec-sub{color:#6b7280;font-size:.95rem;line-height:1.6;max-width:480px;margin:0 auto 36px;}
+    .sec-sub-dark{color:#9ca3af;}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,#e5e7eb 20%,#e5e7eb 80%,transparent);}
+    .bg-light{background:#f9fafb;}
+    .bg-dark{background:#0a0a0a;}
+    .text-center{text-align:center;}
+
+    /* CARDS */
+    .card-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+    .card-grid-2{display:grid;grid-template-columns:1fr;gap:14px;}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:26px 22px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
+    .card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.08);border-color:#22c55e;}
+    .card-dark{background:#111;border-color:#222;}
+    .card-dark:hover{border-color:#22c55e;box-shadow:0 16px 48px rgba(0,0,0,.4);}
+    .card-icon{width:46px;height:46px;background:#f0fdf4;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:#15803d;flex-shrink:0;}
+    .card-icon-dark{background:#1a1a1a;color:#4ade80;}
+    .card-num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;background:#22c55e;color:#000;font-weight:900;font-size:.85rem;border-radius:8px;margin-bottom:12px;}
+    .card-title{font-size:1rem;font-weight:700;color:#111;margin-bottom:8px;line-height:1.3;}
+    .card-title-white{color:#fff;}
+    .card-text{font-size:.875rem;color:#6b7280;line-height:1.6;}
+    .card-text-dark{color:#9ca3af;}
+
+    /* CHECK LIST */
+    .check-grid{display:grid;grid-template-columns:1fr;gap:8px;}
+    .check-row{display:flex;align-items:flex-start;gap:14px;padding:16px;border-radius:12px;transition:background .2s;}
+    .check-row:hover{background:#f9fafb;}
+    .check-dot{width:22px;height:22px;min-width:22px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+    .check-head{font-weight:700;color:#111;font-size:.95rem;margin-bottom:3px;}
+    .check-body{color:#6b7280;font-size:.85rem;line-height:1.5;}
+
+    /* STEPS */
+    .steps-wrap{display:flex;flex-direction:column;gap:36px;position:relative;}
+    .step-row{display:flex;gap:18px;align-items:flex-start;}
+    .step-dot{width:44px;height:44px;min-width:44px;background:#000;color:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem;position:relative;z-index:1;}
+    .step-line{position:absolute;left:21px;top:44px;bottom:-36px;width:2px;background:linear-gradient(180deg,#22c55e,transparent);}
+    .step-body{padding-top:8px;}
+    .step-title{font-weight:700;font-size:1rem;color:#111;margin-bottom:6px;}
+    .step-text{font-size:.875rem;color:#6b7280;line-height:1.6;}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;border:none;cursor:pointer;text-decoration:none;white-space:nowrap;transition:background .2s,transform .15s,box-shadow .2s;border-radius:12px;}
+    .btn-green{background:#22c55e;color:#000;font-size:1.05rem;padding:16px 36px;}
+    .btn-green:hover{background:#16a34a;transform:translateY(-2px);box-shadow:0 8px 32px rgba(34,197,94,.35);}
+    .btn-green-lg{font-size:1.15rem;padding:18px 44px;}
+    .btn-green-sm{font-size:.9rem;padding:12px 26px;border-radius:10px;}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);font-size:.95rem;padding:16px 28px;font-weight:600;}
+    .btn-outline:hover{border-color:rgba(34,197,94,.5);color:#22c55e;}
+    @keyframes pulse-btn{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5);}60%{box-shadow:0 0 0 18px rgba(34,197,94,0);}}
+    .btn-pulse{animation:pulse-btn 2.2s ease-in-out infinite;}
+    .btn-row{display:flex;flex-direction:column;gap:12px;align-items:stretch;max-width:480px;margin:0 auto;}
+    .btn-row .btn{width:100%;justify-content:center;}
+
+    /* CTA DARK */
+    .cta-dark{background:#000;position:relative;overflow:hidden;padding:80px 16px;}
+    .cta-glow{position:absolute;bottom:-120px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(34,197,94,.15) 0%,transparent 65%);pointer-events:none;}
+    .cta-text{color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.8;margin-bottom:36px;text-align:left;}
+    .cta-text strong{color:#fff;}
+    .cta-text .green{color:#22c55e;}
+
+    /* QUOTE */
+    .quote{border-left:4px solid #22c55e;padding:18px 22px;background:rgba(34,197,94,.07);border-radius:0 12px 12px 0;margin-top:32px;}
+    .quote p{color:#d1fae5;font-size:.9rem;line-height:1.75;margin:0;}
+
+    /* FLOAT */
+    .float-wa{position:fixed;bottom:24px;right:24px;z-index:9999;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:transform .2s,box-shadow .2s;text-decoration:none;}
+    .float-wa:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.55);}
+
+    /* CREDIBILITY STRIP */
+    .cred-strip{background:#f9fafb;border-bottom:1px solid #f0f0f0;padding:28px 16px;}
+    .cred-inner{max-width:480px;margin:0 auto;}
+    .cred-pill{display:flex;align-items:center;gap:9px;font-size:.82rem;color:#6b7280;}
+    .cred-pill-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;}
+
+    /* FAQ */
+    .faq-item{border-bottom:1px solid #f0f0f0;padding:18px 0;}
+    .faq-item:first-child{border-top:1px solid #f0f0f0;}
+    .faq-q{font-weight:700;color:#111;font-size:.95rem;display:flex;justify-content:space-between;align-items:flex-start;cursor:pointer;gap:16px;user-select:none;}
+    .faq-q:hover{color:#15803d;}
+    .faq-icon{font-size:1.2rem;color:#9ca3af;flex-shrink:0;font-weight:400;line-height:1;margin-top:2px;transition:color .2s;}
+    .faq-a{font-size:.875rem;color:#6b7280;line-height:1.7;margin-top:12px;display:none;}
+    .faq-item.open .faq-a{display:block;}
+    .faq-item.open .faq-icon{color:#22c55e;}
+    .faq-item.open .faq-q{color:#15803d;}
+
+    /* FOOTER */
+    footer{background:#111;color:#9ca3af;padding:40px 16px;}
+    footer a{color:#6b7280;text-decoration:underline;font-size:.75rem;}
+    footer a:hover{color:#9ca3af;}
+
+    @media(max-width:640px){
+      .hero-title{letter-spacing:-.02em;}
+      .stat-cell{padding:20px 8px;}
+      .stat-lbl{font-size:.65rem;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- FLOAT WHATSAPP -->
+<a href="https://wa.me/5588999471567" target="_blank" rel="noopener noreferrer" class="float-wa" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30" height="30"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- HEADER -->
+<header style="background:#000;padding:12px 16px;">
+  <div style="max-width:480px;margin:0 auto;display:flex;justify-content:center;">
+    <img src="images/design-mode/logo.png" alt="Logo" style="height:64px;width:64px;object-fit:contain;"/>
+  </div>
+</header>
+
+<!-- BANNER -->
+<div class="top-banner">Vagas extremamente limitadas · Mentoria individual · Acesso direto a Cadu Bezerra</div>
+
+<!-- HERO -->
+<section class="hero-bg">
+  <div class="hero-glow"></div>
+  <div style="position:relative;z-index:1;max-width:480px;margin:0 auto;text-align:center;">
+
+    <p data-fade style="font-size:.68rem;color:#4ade80;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px;">Brasil · Europa · Estados Unidos</p>
+
+    <h1 class="hero-title" data-fade data-delay="1">
+      Acesse a estrutura<br/>para <span class="accent">escalar múltiplos 6 dígitos</span><br/>no Brasil e em Euro/Dólar.
+    </h1>
+
+    <p class="hero-sub" data-fade data-delay="2">
+      Mentoria individual. Você trabalha diretamente comigo — sem gravação, sem turma, sem intermediário. O sistema que uso para faturar todos os dias em reais <strong style="color:rgba(255,255,255,.9);">e em euro/dólar.</strong>
+    </p>
+
+    <div class="btn-row" data-fade data-delay="3" style="margin-bottom:52px;">
+      <a href="https://wa.me/5588999471567" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-pulse">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Quero me aplicar agora
+      </a>
+      <a href="#para-quem" class="btn btn-outline">Ver como funciona ↓</a>
+    </div>
+
+    <div data-fade data-delay="4" style="max-width:480px;margin:0 auto;">
+      <div style="border-radius:14px;overflow:hidden;border:1px solid #1a2a1a;box-shadow:0 24px 80px rgba(0,0,0,.8);">
+        <div style="background:#111;padding:10px 14px;display:flex;align-items:center;gap:6px;border-bottom:1px solid #1a1a1a;">
+          <span style="width:9px;height:9px;border-radius:50%;background:#ff5f57;display:block;flex-shrink:0;"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:#febc2e;display:block;flex-shrink:0;"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:#28c840;display:block;flex-shrink:0;"></span>
+          <span style="flex:1;background:#1c1c1c;height:14px;border-radius:20px;margin-left:6px;max-width:140px;"></span>
+        </div>
+        <div style="background:#0a0a0a;display:flex;height:240px;">
+          <div style="width:100px;border-right:1px solid #111;padding:12px 8px;display:flex;flex-direction:column;gap:5px;background:#0d0d0d;flex-shrink:0;">
+            <div style="height:24px;background:#22c55e;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:8px;color:#000;font-weight:800;font-family:sans-serif;">Dashboard</div>
+            <div style="height:20px;background:#141414;border-radius:5px;"></div>
+            <div style="height:20px;background:#141414;border-radius:5px;"></div>
+            <div style="height:20px;background:#141414;border-radius:5px;"></div>
+            <div style="height:20px;background:#141414;border-radius:5px;"></div>
+          </div>
+          <div style="flex:1;padding:12px;display:flex;flex-direction:column;gap:9px;overflow:hidden;min-width:0;">
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;">
+              <div style="background:#111;border:1px solid #1a2a1a;border-radius:7px;padding:7px 5px;text-align:center;">
+                <div style="color:#22c55e;font-weight:900;font-size:11px;line-height:1;font-family:sans-serif;">R$100K</div>
+                <div style="color:#444;font-size:7px;margin-top:3px;font-family:sans-serif;">por mês</div>
+              </div>
+              <div style="background:#111;border:1px solid #1a2a1a;border-radius:7px;padding:7px 5px;text-align:center;">
+                <div style="color:#22c55e;font-weight:900;font-size:11px;line-height:1;font-family:sans-serif;">€ + $</div>
+                <div style="color:#444;font-size:7px;margin-top:3px;font-family:sans-serif;">Global</div>
+              </div>
+              <div style="background:#111;border:1px solid #1a2a1a;border-radius:7px;padding:7px 5px;text-align:center;">
+                <div style="color:#22c55e;font-weight:900;font-size:11px;line-height:1;font-family:sans-serif;">30d</div>
+                <div style="color:#444;font-size:7px;margin-top:3px;font-family:sans-serif;">setup</div>
+              </div>
+            </div>
+            <div style="background:#111;border:1px solid #1a2a1a;border-radius:7px;padding:9px;flex:1;">
+              <div style="color:#555;font-size:7px;margin-bottom:5px;font-family:sans-serif;">Faturamento mensal</div>
+              <svg viewBox="0 0 180 46" style="width:100%;height:46px;display:block;" preserveAspectRatio="none">
+                <defs><linearGradient id="cg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#22c55e" stop-opacity=".35"/><stop offset="100%" stop-color="#22c55e" stop-opacity="0"/></linearGradient></defs>
+                <polygon points="0,44 25,40 50,34 75,26 100,18 125,12 150,7 175,3 180,2 180,46 0,46" fill="url(#cg)"/>
+                <polyline points="0,44 25,40 50,34 75,26 100,18 125,12 150,7 175,3 180,2" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div style="display:flex;gap:5px;">
+              <div style="background:#22c55e;border-radius:5px;padding:4px 8px;font-size:7px;color:#000;font-weight:800;font-family:sans-serif;white-space:nowrap;">Call 1:1 ✓</div>
+              <div style="background:#22c55e;border-radius:5px;padding:4px 8px;font-size:7px;color:#000;font-weight:800;font-family:sans-serif;white-space:nowrap;">Implementação ✓</div>
+              <div style="background:#1a2a1a;border:1px solid #22c55e;border-radius:5px;padding:4px 8px;font-size:7px;color:#22c55e;font-weight:700;font-family:sans-serif;white-space:nowrap;">Escala →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-bar">
+  <div class="stats-inner" data-fade>
+    <div class="stat-cell">
+      <span class="stat-num">R$100K+</span>
+      <span class="stat-lbl">possível por mês</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">2</span>
+      <span class="stat-lbl">mercados: BR + Global</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">30</span>
+      <span class="stat-lbl">dias para o sistema rodar</span>
+    </div>
+  </div>
+</section>
+
+<!-- CREDIBILITY STRIP -->
+<div class="cred-strip" data-fade>
+  <div class="cred-inner">
+    <p style="font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9ca3af;margin-bottom:12px;">Quem é Cadu Bezerra</p>
+    <div style="display:flex;flex-direction:column;gap:9px;">
+      <div class="cred-pill"><span class="cred-pill-dot"></span>Vende low ticket todos os dias — Brasil, Europa e Estados Unidos simultaneamente</div>
+      <div class="cred-pill"><span class="cred-pill-dot"></span>Recebe em euro e dólar direto na conta bancária, operando do Brasil</div>
+      <div class="cred-pill"><span class="cred-pill-dot"></span>Operação 100% enxuta: uma assistente virtual, sem escritório, sem equipe</div>
+      <div class="cred-pill"><span class="cred-pill-dot"></span>Aceita poucos mentorados por vez — para manter a qualidade do acesso direto</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PARA QUEM É -->
+<section class="sec" id="para-quem" style="background:#fff;">
+  <div class="sec-inner">
+    <div class="text-center" style="margin-bottom:44px;" data-fade>
+      <span class="sec-tag">Público ideal</span>
+      <h2 class="sec-title">Para quem é esta mentoria</h2>
+      <p class="sec-sub">Esse programa só faz sentido se você já percebeu que:</p>
+    </div>
+    <div class="check-grid">
+      <div class="check-row" data-fade data-delay="1">
+        <div class="check-dot"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></div>
+        <div><p class="check-head">Tráfego pago funciona, mas você não domina</p><p class="check-body">Quer parar de depender de orgânico e montar uma máquina de vendas que roda todo dia.</p></div>
+      </div>
+      <div class="check-row" data-fade data-delay="2">
+        <div class="check-dot"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></div>
+        <div><p class="check-head">Receita internacional ainda não é realidade</p><p class="check-body">Quer estruturar vendas em euro/dólar sem abrir empresa fora ou ter burocracia.</p></div>
+      </div>
+      <div class="check-row" data-fade data-delay="3">
+        <div class="check-dot"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></div>
+        <div><p class="check-head">Cansado de atrair curioso quebrado</p><p class="check-body">Quer leads qualificados que compram sem pedir desconto.</p></div>
+      </div>
+      <div class="check-row" data-fade data-delay="4">
+        <div class="check-dot"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></div>
+        <div><p class="check-head">Quer acesso direto, não mais teoria</p><p class="check-body">Chega de cursos que ensinam o que fazer. Você quer ver o que funciona na prática — no meu negócio real.</p></div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:28px;font-size:.9rem;color:#6b7280;">Também serve para empresários, especialistas e gestores que querem <strong style="color:#111;">criar caixa rápido em reais</strong> e depois escalar em euro/dólar.</p>
+    <p style="text-align:center;margin-top:10px;font-weight:700;color:#22c55e;font-size:.95rem;">Se não é você, pode fechar essa página agora.</p>
+
+    <!-- NÃO É PARA QUEM -->
+    <div style="margin-top:36px;background:#fafafa;border:1px solid #f0f0f0;border-radius:16px;padding:24px 20px;" data-fade>
+      <p style="font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#dc2626;margin-bottom:16px;">Não é para quem</p>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <span style="color:#dc2626;font-size:1rem;line-height:1.4;flex-shrink:0;">×</span>
+          <p style="font-size:.875rem;color:#6b7280;line-height:1.55;">Está procurando curso barato com "acesso vitalício" para assistir e nunca implementar</p>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <span style="color:#dc2626;font-size:1rem;line-height:1.4;flex-shrink:0;">×</span>
+          <p style="font-size:.875rem;color:#6b7280;line-height:1.55;">Quer resultado sem colocar dinheiro em tráfego — orgânico não é o foco aqui</p>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <span style="color:#dc2626;font-size:1rem;line-height:1.4;flex-shrink:0;">×</span>
+          <p style="font-size:.875rem;color:#6b7280;line-height:1.55;">Precisa ser convencido de que vender funciona — aqui a conversa começa do ponto onde você já executa</p>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <span style="color:#dc2626;font-size:1rem;line-height:1.4;flex-shrink:0;">×</span>
+          <p style="font-size:.875rem;color:#6b7280;line-height:1.55;">Não tem nada para vender e quer que eu invente o seu negócio do zero</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- O QUE VOCÊ RECEBE -->
+<section class="sec bg-light">
+  <div class="sec-inner">
+    <div class="text-center" style="margin-bottom:44px;" data-fade>
+      <span class="sec-tag">O que está incluso</span>
+      <h2 class="sec-title">O que você recebe</h2>
+      <p class="sec-sub">Quatro pilares de execução real — zero enrolação.</p>
+    </div>
+    <div class="card-grid">
+
+      <div class="card" data-fade data-delay="1">
+        <div class="card-num">1</div>
+        <h3 class="card-title">Acesso direto ao meu método</h3>
+        <p class="card-text">Tráfego, copy e oferta — a estrutura real que uso para vender todos os dias. Documentado do jeito que funciona de verdade. Zero teoria, 100% campo.</p>
+      </div>
+
+      <div class="card" data-fade data-delay="2">
+        <div class="card-num">2</div>
+        <h3 class="card-title">Calls mensais comigo</h3>
+        <p class="card-text">Você traz o problema com dados reais: anúncio que não converte, copy que não clica, oferta que não vende. Eu mostro o que ajustar. Sem intermediário.</p>
+      </div>
+
+      <div class="card" data-fade data-delay="3">
+        <div class="card-num">3</div>
+        <h3 class="card-title">Comunidade privada de execução</h3>
+        <p class="card-text">Bastidores vivos da minha operação. Campanhas rodando, criativos, resultados e ajustes — tudo em tempo real, sem filtro de palco.</p>
+      </div>
+
+      <div class="card" data-fade data-delay="4">
+        <div class="card-num">4</div>
+        <h3 class="card-title">Método Underground Global Player</h3>
+        <p class="card-text">Do setup do tráfego global à primeira venda em euro. Em vídeos curtos e práticos — com o que importa. Sistema rodando em até 30 dias.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMO FUNCIONA -->
+<section class="sec" style="background:#fff;">
+  <div class="sec-inner-sm">
+    <div class="text-center" style="margin-bottom:44px;" data-fade>
+      <span class="sec-tag">O processo</span>
+      <h2 class="sec-title">O formato que funciona</h2>
+      <p class="sec-sub">Todos os mentorados seguem a mesma linha:</p>
+    </div>
+    <div class="steps-wrap">
+
+      <div class="step-row" data-fade data-delay="1">
+        <div style="position:relative;"><div class="step-dot">1</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <p class="step-title">Você traz seu cenário real</p>
+          <p class="step-text">Anúncio sem clique, copy travada, oferta sem venda, funil sem ROI — você apresenta o problema com dados reais. Nada de "acho que o problema é X".</p>
+        </div>
+      </div>
+
+      <div class="step-row" data-fade data-delay="2">
+        <div style="position:relative;"><div class="step-dot">2</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <p class="step-title">Eu aponto exatamente o que mudar</p>
+          <p class="step-text">Com base no método validado, indico o ajuste certo — na oferta, no tráfego ou na copy. Sem achismo, sem opinião de fórum.</p>
+        </div>
+      </div>
+
+      <div class="step-row" data-fade data-delay="3">
+        <div style="position:relative;"><div class="step-dot">3</div></div>
+        <div class="step-body">
+          <p class="step-title">Você implementa e mede o resultado</p>
+          <p class="step-text">Volta com os dados. Recebe feedback direto para ajustar e escalar. O ciclo continua até o número que você quer.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ESTILO DE VIDA (dark) -->
+<section class="sec bg-dark">
+  <div class="sec-inner">
+    <div class="text-center" style="margin-bottom:44px;" data-fade>
+      <span class="sec-tag sec-tag-dark">O resultado real</span>
+      <h2 class="sec-title sec-title-white">O estilo de vida que essa operação permite</h2>
+      <p class="sec-sub sec-sub-dark">Não é sobre métricas de vaidade ou plaquinha de faturamento.<br/><strong style="color:#fff;">É sobre um negócio que serve à sua vida.</strong></p>
+    </div>
+
+    <div class="card-grid" style="margin-bottom:40px;">
+      <div class="card card-dark" data-fade data-delay="1">
+        <div class="card-icon card-icon-dark"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+        <h4 class="card-title card-title-white">Faturamento Escalável</h4>
+        <p class="card-text card-text-dark">R$30K, R$50K, R$100K+/mês — com margem alta e previsibilidade.</p>
+      </div>
+      <div class="card card-dark" data-fade data-delay="2">
+        <div class="card-icon card-icon-dark"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+        <h4 class="card-title card-title-white">Receita Internacional</h4>
+        <p class="card-text card-text-dark">Receber em euro/dólar direto na sua conta bancária.</p>
+      </div>
+      <div class="card card-dark" data-fade data-delay="3">
+        <div class="card-icon card-icon-dark"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h4 class="card-title card-title-white">Operação Enxuta</h4>
+        <p class="card-text card-text-dark">Uma assistente virtual. Sem equipe gigante, sem escritório.</p>
+      </div>
+      <div class="card card-dark" data-fade data-delay="4">
+        <div class="card-icon card-icon-dark"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h4 class="card-title card-title-white">Previsibilidade</h4>
+        <p class="card-text card-text-dark">Vendas todos os dias. Sem depender de lançamento.</p>
+      </div>
+    </div>
+
+    <div class="quote" data-fade>
+      <p>Meu time hoje é uma assistente virtual (humana). Minha operação é enxuta e roda praticamente no automático.<br/><br/>
+      E eu passo mais tempo livre do que com meu MacBook.<br/><br/>
+      <strong style="color:#4ade80;">E meu negócio roda porque é simples, não porque é mágico.</strong></p>
+    </div>
+
+    <p style="color:#6b7280;font-size:.875rem;line-height:1.75;margin-top:24px;" data-fade>
+      Se você quer a jornada do herói workaholic, equipe de 12 pessoas, escritório e cargo de "CEO"… <strong style="color:#555;">Esse não é o seu lugar.</strong><br/><br/>
+      Mas se você quer liberdade, alta margem, previsibilidade — usando o conhecimento que você já tem, com minha ajuda direta… <strong style="color:#22c55e;">Você está olhando pro caminho certo.</strong>
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VIBECODING -->
+<section class="sec" style="background:#fff;" id="vibecoding">
+  <div class="sec-inner">
+    <div class="text-center" style="margin-bottom:44px;" data-fade>
+      <span class="sec-tag" style="background:#000;border-color:#1a1a1a;color:#4ade80;">Novo · Vibecoding com IA</span>
+      <h2 class="sec-title" style="margin-top:10px;">Crie apps, sistemas e<br/>automações usando IA.</h2>
+      <p class="sec-sub">Com Claude Code, VS Code e as ferramentas certas. Do zero ao deploy.<br/><strong style="color:#111;">Sem precisar saber programar.</strong></p>
+    </div>
+
+    <!-- Terminal mockup -->
+    <div data-fade style="border-radius:14px;overflow:hidden;border:1px solid #222;box-shadow:0 20px 60px rgba(0,0,0,.5);margin-bottom:28px;">
+      <!-- barra do terminal -->
+      <div style="background:#1c1c1e;padding:11px 14px;display:flex;align-items:center;gap:7px;border-bottom:1px solid #2a2a2a;">
+        <span style="width:12px;height:12px;border-radius:50%;background:#ff5f57;display:block;flex-shrink:0;"></span>
+        <span style="width:12px;height:12px;border-radius:50%;background:#febc2e;display:block;flex-shrink:0;"></span>
+        <span style="width:12px;height:12px;border-radius:50%;background:#28c840;display:block;flex-shrink:0;"></span>
+        <span style="flex:1;text-align:center;font-size:.68rem;color:#666;font-family:-apple-system,sans-serif;letter-spacing:.02em;">claude — bash</span>
+      </div>
+      <!-- corpo -->
+      <div style="background:#0d0d0f;padding:20px 18px;font-family:'Courier New',Courier,monospace;font-size:.8rem;line-height:1.9;">
+        <!-- comentário -->
+        <div style="color:#4a5568;margin-bottom:4px;"># você fala em português, a IA constrói</div>
+        <!-- prompt + comando -->
+        <div style="margin-bottom:14px;">
+          <span style="color:#22c55e;font-weight:700;">❯</span>
+          <span style="color:#e5e5e5;"> claude </span><span style="color:#fbbf24;">"cria um CRM com kanban e autenticação Google"</span>
+        </div>
+        <!-- steps -->
+        <div style="display:flex;flex-direction:column;gap:3px;margin-bottom:14px;">
+          <div><span style="color:#22c55e;">✓</span> <span style="color:#a3a3a3;">Gerando estrutura do projeto</span> <span style="color:#525252;">· Next.js + TypeScript</span></div>
+          <div><span style="color:#22c55e;">✓</span> <span style="color:#a3a3a3;">Configurando banco de dados</span> <span style="color:#525252;">· Supabase PostgreSQL</span></div>
+          <div><span style="color:#22c55e;">✓</span> <span style="color:#a3a3a3;">Autenticação Google</span> <span style="color:#525252;">· NextAuth configurado</span></div>
+          <div><span style="color:#22c55e;">✓</span> <span style="color:#a3a3a3;">Board Kanban</span> <span style="color:#525252;">· drag-and-drop implementado</span></div>
+          <div><span style="color:#22c55e;">✓</span> <span style="color:#a3a3a3;">Deploy na Vercel</span> <span style="color:#525252;">· domínio configurado</span></div>
+        </div>
+        <!-- resultado final -->
+        <div style="background:#0a1a0a;border:1px solid #1a3a1a;border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px;">
+          <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;flex-shrink:0;box-shadow:0 0 8px #22c55e;"></span>
+          <span style="color:#22c55e;font-weight:700;">App rodando</span>
+          <span style="color:#6b7280;">—</span>
+          <span style="color:#e5e5e5;">seucrm.vercel.app</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- O que aprende -->
+    <div class="card-grid" style="margin-bottom:28px;">
+      <div class="card" data-fade data-delay="1" style="border-left:3px solid #22c55e;border-radius:4px 16px 16px 4px;">
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#15803d;margin-bottom:6px;">Claude Code</p>
+        <p style="font-weight:700;color:#111;font-size:.95rem;margin-bottom:5px;">Seu dev particular no terminal</p>
+        <p class="card-text">Instala, configura e usa do zero. Você descreve em português — ele escreve, testa e corrige o código.</p>
+      </div>
+      <div class="card" data-fade data-delay="2" style="border-left:3px solid #22c55e;border-radius:4px 16px 16px 4px;">
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#15803d;margin-bottom:6px;">VS Code + IA</p>
+        <p style="font-weight:700;color:#111;font-size:.95rem;margin-bottom:5px;">Editor configurado para vibecoding</p>
+        <p class="card-text">Extensões, atalhos e ambiente certo. Você edita e revisa código sem entender nada de sintaxe.</p>
+      </div>
+      <div class="card" data-fade data-delay="3" style="border-left:3px solid #22c55e;border-radius:4px 16px 16px 4px;">
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#15803d;margin-bottom:6px;">Do Zero ao Deploy</p>
+        <p style="font-weight:700;color:#111;font-size:.95rem;margin-bottom:5px;">App completo em produção</p>
+        <p class="card-text">Banco de dados, autenticação, deploy na Vercel com domínio — tudo funcionando de verdade.</p>
+      </div>
+      <div class="card" data-fade data-delay="4" style="border-left:3px solid #22c55e;border-radius:4px 16px 16px 4px;">
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#15803d;margin-bottom:6px;">Automações</p>
+        <p style="font-weight:700;color:#111;font-size:.95rem;margin-bottom:5px;">Sistemas que trabalham por você</p>
+        <p class="card-text">WhatsApp bot, captura de leads, integrações via API e webhooks. Sem tocar em código na mão.</p>
+      </div>
+    </div>
+
+    <!-- Tags de ferramentas -->
+    <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:28px;" data-fade>
+      <span style="font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6b7280;border:1px solid #e5e7eb;border-radius:6px;padding:5px 10px;">Claude Code</span>
+      <span style="font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6b7280;border:1px solid #e5e7eb;border-radius:6px;padding:5px 10px;">VS Code</span>
+      <span style="font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6b7280;border:1px solid #e5e7eb;border-radius:6px;padding:5px 10px;">Vercel</span>
+      <span style="font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6b7280;border:1px solid #e5e7eb;border-radius:6px;padding:5px 10px;">APIs</span>
+      <span style="font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6b7280;border:1px solid #e5e7eb;border-radius:6px;padding:5px 10px;">Automação</span>
+      <span style="font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6b7280;border:1px solid #e5e7eb;border-radius:6px;padding:5px 10px;">Supabase</span>
+      <span style="font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6b7280;border:1px solid #e5e7eb;border-radius:6px;padding:5px 10px;">WhatsApp API</span>
+    </div>
+
+    <p style="text-align:center;color:#6b7280;font-size:.875rem;line-height:1.65;" data-fade>
+      Crie para o seu negócio. Ou <strong style="color:#111;">cobre para fazer para clientes</strong> — apps simples saem entre R$1.500 e R$5.000 dependendo do escopo.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="background:#fff;">
+  <div class="sec-inner-sm">
+    <div class="text-center" style="margin-bottom:36px;" data-fade>
+      <span class="sec-tag">Dúvidas</span>
+      <h2 class="sec-title">Perguntas frequentes</h2>
+      <p class="sec-sub" style="margin-bottom:0;">As mais comuns — respondidas sem rodeio.</p>
+    </div>
+
+    <!-- Bloco: Mentoria -->
+    <p style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9ca3af;margin-bottom:0;padding:0 0 2px;" data-fade>Sobre a mentoria</p>
+    <div data-fade>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Preciso já ter um negócio funcionando?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <p class="faq-a">Não necessariamente. Mas você precisa ter algo para vender — conhecimento, serviço ou produto digital. A mentoria entrega a estrutura de tráfego e vendas. O que vender é com você.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>É um curso ou uma mentoria?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <p class="faq-a">Mentoria. Você não só assiste vídeos — tem acesso direto a mim nas calls mensais e na comunidade privada. Você traz o problema real e eu mostro o caminho. Nada de suporte por ticket ou bot.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Quanto tempo leva para ver resultado?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <p class="faq-a">O método foi desenhado para gerar as primeiras vendas em até 30 dias. Pressupõe execução — quem só assiste e não implementa não vai ter resultado. Quem executa, tem. Simples assim.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Como funciona receber em euro/dólar?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <p class="faq-a">Você aprende a estruturar tráfego para mercados externos (Europa e EUA) e receber internacionalmente sem abrir empresa fora. Você opera do Brasil — com os gateways e contas certas que eu uso.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Tem suporte entre as calls?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <p class="faq-a">Sim. A comunidade privada é o canal direto entre as calls. Você posta dúvidas, criativos, métricas — e recebe feedback meu e dos outros mentorados que estão executando.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Qual o investimento?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <p class="faq-a">Discuto na conversa direta. Não publico valor aqui porque a mentoria é aplicada — passo por um filtro antes de aceitar. Me chama no WhatsApp e conversamos.</p>
+      </div>
+    </div>
+
+    <!-- Bloco: Vibecoding -->
+    <p style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9ca3af;margin-top:32px;margin-bottom:0;padding:0 0 2px;" data-fade>Sobre vibecoding e IA</p>
+    <div data-fade>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Preciso saber programar para vibecoding?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <p class="faq-a">Não. Se você consegue descrever o que quer em português, consegue construir. O Claude Code escreve, testa e corrige o código — você direciona e aprende vendo acontecer.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Preciso pagar a API da Anthropic?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <p class="faq-a">O Claude Code tem plano pago (alguns dólares por mês para uso normal). Aprende a otimizar o uso. Se você usa para cobrar de clientes, o custo é repassado facilmente no preço do projeto.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Posso cobrar para fazer isso para clientes?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <p class="faq-a">Sim — esse é um dos objetivos. Apps simples (landing page com backend, bot de WhatsApp, painel interno) saem entre R$500 e R$5.000 dependendo do escopo. Você aprende a montar e entregar.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Funciona no Windows e no Mac?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <p class="faq-a">Sim. O Claude Code roda nos dois sistemas. O setup é diferente em cada um — você aprende a configurar o ambiente correto para o seu OS do zero.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- O QUE SABER -->
+<section class="sec" style="background:#f9fafb;">
+  <div class="sec-inner-sm">
+    <div class="text-center" style="margin-bottom:40px;" data-fade>
+      <span class="sec-tag">Seja honesto consigo</span>
+      <h2 class="sec-title">O que você deve saber antes de entrar</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="card" data-fade data-delay="1" style="border-left:4px solid #22c55e;border-radius:4px 16px 16px 4px;">
+        <p style="margin:0;color:#111;font-size:.9rem;line-height:1.6;"><strong>Aqui não tem mágica.</strong> Você recebe método e suporte direto comigo — mas quem executa é você.</p>
+      </div>
+      <div class="card" data-fade data-delay="2" style="border-left:4px solid #22c55e;border-radius:4px 16px 16px 4px;">
+        <p style="margin:0;color:#111;font-size:.9rem;line-height:1.6;">A mentoria entrega a estrutura pronta. <strong>Quem aciona é você.</strong> Sem ação, sem resultado — não importa o método.</p>
+      </div>
+      <div class="card" data-fade data-delay="3" style="border-left:4px solid #22c55e;border-radius:4px 16px 16px 4px;">
+        <p style="margin:0;color:#111;font-size:.9rem;line-height:1.6;">O que eu faço é <strong>encurtar sua curva de aprendizado</strong> e te dar o caminho validado pra vender todos os dias — em reais e em euro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA FINAL -->
+<section class="cta-dark">
+  <div class="cta-glow"></div>
+  <div style="position:relative;z-index:1;max-width:480px;margin:0 auto;text-align:center;">
+
+    <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.12;letter-spacing:-.03em;margin:18px 0 24px;" data-fade data-delay="1">
+      A decisão é sua.<br/><span style="color:#22c55e;">Mas o momento é agora.</span>
+    </h2>
+
+    <div class="cta-text" data-fade data-delay="2">
+      <p>Não tem botão de compra aqui. Não tem checkout. Não tem closer.</p>
+      <p style="margin-top:10px;">A mentoria é individual — e eu só trabalho com quem faz sentido trabalhar. Por isso o processo começa com uma conversa.</p>
+      <p style="margin-top:10px;">Se o que você leu faz sentido pra onde você quer chegar, <span class="green">me chama no WhatsApp.</span></p>
+      <p style="margin-top:10px;"><strong>Você fala o seu cenário. Eu digo se consigo te ajudar.</strong> Sem pressão dos dois lados.</p>
+    </div>
+
+    <div data-fade data-delay="3">
+      <a href="https://wa.me/5588999471567" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-green-lg btn-pulse" style="width:100%;display:flex;max-width:480px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Quero conversar — Falar no WhatsApp
+      </a>
+      <p style="color:rgba(255,255,255,.35);font-size:.75rem;margin-top:12px;">Direto comigo. Sem bot, sem assistente.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PS -->
+<section style="padding:36px 16px;background:#fff;">
+  <div style="max-width:480px;margin:0 auto;" data-fade>
+    <h3 style="font-size:1.15rem;font-weight:800;margin-bottom:10px;color:#111;">P.S:</h3>
+    <p style="color:#9ca3af;font-size:.875rem;line-height:1.7;">Essa conversa é o primeiro filtro. Não aceito todo mundo — e prefiro ser honesto antes de você chegar do que depois. Se o fit não existir, eu mesmo te digo. Mas se existir, a gente começa rápido.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="max-width:480px;margin:0 auto;text-align:center;">
+    <img src="images/design-mode/logo.png" alt="Logo" style="width:38px;height:38px;object-fit:contain;margin:0 auto 14px;display:block;opacity:.5;"/>
+    <p style="font-size:.78rem;margin-bottom:14px;">Cadu Bezerra | Copyright ©2025 | Todos os direitos reservados</p>
+    <p style="font-size:.7rem;line-height:1.7;margin-bottom:10px;max-width:560px;margin-left:auto;margin-right:auto;">Este site não faz parte do site do Facebook nem do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de forma alguma. FACEBOOK é uma marca registrada da FACEBOOK, Inc.</p>
+    <p style="font-size:.7rem;line-height:1.7;margin-bottom:20px;max-width:560px;margin-left:auto;margin-right:auto;">Os resultados que você vê são os resultados de clientes específicos. Não garantimos que você receberá resultados específicos. Garantimos apenas que forneceremos nossas ferramentas para ajudar a melhorar o desempenho dos seus anúncios ou seu dinheiro de volta.</p>
+    <div style="border-top:1px solid #222;padding-top:14px;">
+      <a href="/privacidade.html" rel="noopener">Política de Privacidade</a>
+      <span style="color:#333;margin:0 10px;">—</span>
+      <a href="/termos.html" rel="noopener">Termos e Condições</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // scroll fade-in
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('[data-fade]').forEach(el => io.observe(el));
+
+  // smooth scroll — sanitized: only matches known anchors in page
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (!/^#[\w-]+$/.test(id)) return; // block anything that isn't #word
+      const t = document.querySelector(id);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+
+  // FAQ toggle — no inline onclick, wired here
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      const icon = i.querySelector('.faq-icon');
+      if (icon) icon.textContent = '+';
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      const icon = el.querySelector('.faq-icon');
+      if (icon) icon.textContent = '−';
+    }
+  }
+  document.querySelectorAll('.faq-q').forEach(el => {
+    el.addEventListener('click', () => toggleFaq(el));
+  });
+</script>
+
+</body>
+</html>

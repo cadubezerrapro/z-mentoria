@@ -1,0 +1,22 @@
+# Claude Code (configs locais)
+.claude/
+
+# Ambiente
+.env
+.env.local
+.env.production
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Node (caso instale dependências no futuro)
+node_modules/
+
+# Build artifacts
+dist/
+.next/
