@@ -3,34 +3,68 @@
 # ============================================================
 
 <IfModule mod_headers.c>
-  # Bloqueia clickjacking — ninguém pode iframear sua LP
+  # Anti-clickjacking
   Header always set X-Frame-Options "DENY"
 
-  # Impede MIME sniffing — browser respeita o Content-Type declarado
+  # Anti-MIME sniffing
   Header always set X-Content-Type-Options "nosniff"
 
-  # Controle de referrer — não vaza URL para terceiros
+  # XSS Protection (browsers legados)
+  Header always set X-XSS-Protection "1; mode=block"
+
+  # Referrer — não vaza URL completa para terceiros
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
-  # Desabilita features de browser que você não usa
+  # Desabilita features de browser que não são usadas
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
 
-  # Content Security Policy — só carrega scripts de origens conhecidas
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.utmify.com.br; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://cdn.utmify.com.br; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;"
+  # HSTS — 2 anos, força HTTPS inclusive em subdomínios
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+  # Content Security Policy — só carrega de origens conhecidas
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.utmify.com.br https://connect.facebook.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; connect-src 'self' https://cdn.utmify.com.br https://www.google-analytics.com https://connect.facebook.net; font-src 'self' data:; frame-src https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'none'; upgrade-insecure-requests;"
 
   # Remove informações do servidor
   Header always unset X-Powered-By
   Header always unset Server
+  Header always unset X-AspNet-Version
 </IfModule>
 
 # ============================================================
-# HTTPS FORÇADO
+# HTTPS FORÇADO + PROTEÇÕES DE URL
 # ============================================================
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Força HTTPS
   RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} !^localhost
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Bloqueia path traversal
+  RewriteCond %{QUERY_STRING} (\.\./|\.\.\\) [NC]
+  RewriteRule .* - [F,L]
+
+  # Bloqueia SQLi em query string
+  RewriteCond %{QUERY_STRING} (union.*select|insert.*into|drop\s+table|delete\s+from|exec\s*\(|execute\s*\() [NC]
+  RewriteRule .* - [F,L]
+
+  # Bloqueia XSS em query string
+  RewriteCond %{QUERY_STRING} (<script|javascript:|vbscript:|onload=|onerror=|onclick=|eval\() [NC]
+  RewriteRule .* - [F,L]
+
+  # Bloqueia inclusão remota de arquivo (RFI)
+  RewriteCond %{QUERY_STRING} (https?|ftp):// [NC]
+  RewriteRule .* - [F,L]
+
+  # Bloqueia null bytes
+  RewriteCond %{QUERY_STRING} \\0 [NC]
+  RewriteRule .* - [F,L]
+
+  # Bloqueia bots de scanner conhecidos
+  RewriteCond %{HTTP_USER_AGENT} (sqlmap|nikto|nmap|masscan|dirbuster|wfuzz|havij|acunetix|nessus|burpsuite|zgrab|python-requests|libwww-perl|curl/[0-7]\.) [NC]
+  RewriteRule .* - [F,L]
 </IfModule>
 
 # ============================================================
@@ -38,19 +72,44 @@
 # ============================================================
 
 # Sem listagem de diretórios
-Options -Indexes
+Options -Indexes -ExecCGI
+ServerSignature Off
 
 # Bloqueia acesso a arquivos ocultos (.htaccess, .env, etc.)
 <FilesMatch "^\.">
-  Order allow,deny
-  Deny from all
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
 </FilesMatch>
 
 # Bloqueia acesso direto a arquivos sensíveis
-<FilesMatch "\.(env|log|sh|bak|sql|gz|tar)$">
-  Order allow,deny
-  Deny from all
+<FilesMatch "\.(env|log|sh|bak|sql|gz|tar|ini|conf|config|phar|rb|py|pl)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
 </FilesMatch>
+
+# Bloqueia execução de scripts do lado servidor
+<FilesMatch "\.(php|php3|php4|php5|phtml|asp|aspx|jsp|cfm|cgi)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+
+# Restringe métodos HTTP a GET/POST/HEAD
+<LimitExcept GET POST HEAD>
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</LimitExcept>
 
 # ============================================================
 # CACHE
@@ -63,8 +122,31 @@ Options -Indexes
   # Assets estáticos — cache longo
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+# ============================================================
+# COMPRESSÃO GZIP
+# ============================================================
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# ============================================================
+# TIPOS MIME
+# ============================================================
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
+  AddType image/svg+xml .svg
+  AddType application/javascript .js
 </IfModule>
