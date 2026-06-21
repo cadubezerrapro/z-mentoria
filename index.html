@@ -20,15 +20,6 @@
   <link rel="icon" href="cadudoblack-favicon.png"/>
   <link rel="apple-touch-icon" href="cadudoblack-favicon.png"/>
   <link rel="stylesheet" href="css/style.css"/>
-  <script>
-    window.pixelId = "68c61f6ea983bb67b8e00765";
-    var a = document.createElement("script");
-    a.setAttribute("async","");
-    a.setAttribute("defer","");
-    a.setAttribute("src","https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-    document.head.appendChild(a);
-  </script>
-  <script async defer src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck="true" data-utmify-prevent-subids="true"></script>
   <style>
     *{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
@@ -47,30 +38,42 @@
     .hero-bg{background:#000;position:relative;overflow:hidden;padding:52px 20px 60px;}
     .hero-glow{position:absolute;top:-160px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(34,197,94,.18) 0%,transparent 60%);pointer-events:none;animation:glow-pulse 5s ease-in-out infinite;}
     @keyframes glow-pulse{0%,100%{opacity:.7;transform:translateX(-50%) scale(1);}50%{opacity:1;transform:translateX(-50%) scale(1.08);}}
-    .hero-title{font-size:clamp(1.3rem,3.2vw,1.5rem);font-weight:900;line-height:1.12;color:#fff;letter-spacing:-.02em;margin-bottom:20px;}
+    .hero-title{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:900;line-height:1.1;color:#fff;letter-spacing:-.03em;margin-bottom:22px;}
     .hero-title .accent{color:#22c55e;}
-    .hero-sub{font-size:.95rem;color:rgba(255,255,255,.6);max-width:480px;margin:0 auto 28px;line-height:1.65;}
+    .hero-sub{font-size:1.05rem;color:rgba(255,255,255,.6);max-width:640px;margin:0 auto 32px;line-height:1.7;}
+    /* hero split layout */
+    .hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:48px;padding:0 8px;}
+    .hero-text{text-align:center;width:100%;}
+    .hero-mockup{width:100%;}
+    @media(min-width:900px){
+      .hero-bg{padding:80px 32px 88px;}
+      .hero-inner{flex-direction:row;align-items:center;gap:80px;}
+      .hero-text{flex:1;text-align:left;}
+      .hero-text .hero-sub{margin-left:0;margin-right:0;}
+      .hero-text .btn-row{margin-left:0;margin-right:0;}
+      .hero-mockup{flex:1;max-width:560px;}
+    }
 
     /* BANNER */
     .top-banner{background:#15803d;padding:11px 16px;text-align:center;font-weight:700;color:#fff;font-size:.85rem;letter-spacing:.01em;}
 
     /* STATS */
     .stats-bar{background:#fff;border-bottom:1px solid #f0f0f0;}
-    .stats-inner{display:grid;grid-template-columns:repeat(3,1fr);max-width:480px;margin:0 auto;}
-    .stat-cell{padding:20px 8px;text-align:center;border-right:1px solid #f3f4f6;}
+    .stats-inner{display:grid;grid-template-columns:repeat(3,1fr);max-width:720px;margin:0 auto;}
+    .stat-cell{padding:24px 12px;text-align:center;border-right:1px solid #f3f4f6;}
     .stat-cell:last-child{border-right:none;}
-    .stat-num{display:block;font-size:clamp(1.2rem,5vw,1.8rem);font-weight:900;color:#22c55e;line-height:1;}
-    .stat-lbl{font-size:.65rem;color:#9ca3af;margin-top:5px;font-weight:500;}
+    .stat-num{display:block;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:900;color:#22c55e;line-height:1;}
+    .stat-lbl{font-size:.75rem;color:#9ca3af;margin-top:6px;font-weight:500;}
 
     /* SECTION HELPERS */
-    .sec{padding:52px 16px;}
-    .sec-inner{max-width:480px;margin:0 auto;}
-    .sec-inner-sm{max-width:480px;margin:0 auto;}
-    .sec-tag{display:inline-block;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:100px;padding:4px 14px;font-size:.72rem;font-weight:700;color:#15803d;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+    .sec{padding:72px 24px;}
+    .sec-inner{max-width:720px;margin:0 auto;}
+    .sec-inner-sm{max-width:720px;margin:0 auto;}
+    .sec-tag{display:inline-block;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:100px;padding:5px 16px;font-size:.75rem;font-weight:700;color:#15803d;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;}
     .sec-tag-dark{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3);color:#4ade80;}
-    .sec-title{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;color:#111;line-height:1.15;letter-spacing:-.02em;margin-bottom:10px;}
+    .sec-title{font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:800;color:#111;line-height:1.12;letter-spacing:-.02em;margin-bottom:12px;}
     .sec-title-white{color:#fff;}
-    .sec-sub{color:#6b7280;font-size:.95rem;line-height:1.6;max-width:480px;margin:0 auto 36px;}
+    .sec-sub{color:#6b7280;font-size:1.05rem;line-height:1.65;max-width:720px;margin:0 auto 40px;}
     .sec-sub-dark{color:#9ca3af;}
     .divider{height:1px;background:linear-gradient(90deg,transparent,#e5e7eb 20%,#e5e7eb 80%,transparent);}
     .bg-light{background:#f9fafb;}
@@ -78,36 +81,36 @@
     .text-center{text-align:center;}
 
     /* CARDS */
-    .card-grid{display:grid;grid-template-columns:1fr;gap:14px;}
-    .card-grid-2{display:grid;grid-template-columns:1fr;gap:14px;}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:26px 22px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
+    .card-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+    .card-grid-2{display:grid;grid-template-columns:1fr;gap:16px;}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:30px 26px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
     .card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.08);border-color:#22c55e;}
     .card-dark{background:#111;border-color:#222;}
     .card-dark:hover{border-color:#22c55e;box-shadow:0 16px 48px rgba(0,0,0,.4);}
-    .card-icon{width:46px;height:46px;background:#f0fdf4;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:#15803d;flex-shrink:0;}
+    .card-icon{width:50px;height:50px;background:#f0fdf4;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:#15803d;flex-shrink:0;}
     .card-icon-dark{background:#1a1a1a;color:#4ade80;}
-    .card-num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;background:#22c55e;color:#000;font-weight:900;font-size:.85rem;border-radius:8px;margin-bottom:12px;}
-    .card-title{font-size:1rem;font-weight:700;color:#111;margin-bottom:8px;line-height:1.3;}
+    .card-num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:#22c55e;color:#000;font-weight:900;font-size:.9rem;border-radius:8px;margin-bottom:14px;}
+    .card-title{font-size:1.05rem;font-weight:700;color:#111;margin-bottom:9px;line-height:1.3;}
     .card-title-white{color:#fff;}
-    .card-text{font-size:.875rem;color:#6b7280;line-height:1.6;}
+    .card-text{font-size:.95rem;color:#6b7280;line-height:1.65;}
     .card-text-dark{color:#9ca3af;}
 
     /* CHECK LIST */
     .check-grid{display:grid;grid-template-columns:1fr;gap:8px;}
-    .check-row{display:flex;align-items:flex-start;gap:14px;padding:16px;border-radius:12px;transition:background .2s;}
+    .check-row{display:flex;align-items:flex-start;gap:16px;padding:18px;border-radius:12px;transition:background .2s;}
     .check-row:hover{background:#f9fafb;}
-    .check-dot{width:22px;height:22px;min-width:22px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px;}
-    .check-head{font-weight:700;color:#111;font-size:.95rem;margin-bottom:3px;}
-    .check-body{color:#6b7280;font-size:.85rem;line-height:1.5;}
+    .check-dot{width:24px;height:24px;min-width:24px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+    .check-head{font-weight:700;color:#111;font-size:1rem;margin-bottom:4px;}
+    .check-body{color:#6b7280;font-size:.9rem;line-height:1.55;}
 
     /* STEPS */
-    .steps-wrap{display:flex;flex-direction:column;gap:36px;position:relative;}
-    .step-row{display:flex;gap:18px;align-items:flex-start;}
-    .step-dot{width:44px;height:44px;min-width:44px;background:#000;color:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem;position:relative;z-index:1;}
-    .step-line{position:absolute;left:21px;top:44px;bottom:-36px;width:2px;background:linear-gradient(180deg,#22c55e,transparent);}
-    .step-body{padding-top:8px;}
-    .step-title{font-weight:700;font-size:1rem;color:#111;margin-bottom:6px;}
-    .step-text{font-size:.875rem;color:#6b7280;line-height:1.6;}
+    .steps-wrap{display:flex;flex-direction:column;gap:40px;position:relative;}
+    .step-row{display:flex;gap:22px;align-items:flex-start;}
+    .step-dot{width:48px;height:48px;min-width:48px;background:#000;color:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.05rem;position:relative;z-index:1;}
+    .step-line{position:absolute;left:23px;top:48px;bottom:-40px;width:2px;background:linear-gradient(180deg,#22c55e,transparent);}
+    .step-body{padding-top:9px;}
+    .step-title{font-weight:700;font-size:1.05rem;color:#111;margin-bottom:7px;}
+    .step-text{font-size:.95rem;color:#6b7280;line-height:1.65;}
 
     /* BUTTONS */
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;border:none;cursor:pointer;text-decoration:none;white-space:nowrap;transition:background .2s,transform .15s,box-shadow .2s;border-radius:12px;}
@@ -118,20 +121,22 @@
     .btn-outline{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);font-size:.95rem;padding:16px 28px;font-weight:600;}
     .btn-outline:hover{border-color:rgba(34,197,94,.5);color:#22c55e;}
     @keyframes pulse-btn{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5);}60%{box-shadow:0 0 0 18px rgba(34,197,94,0);}}
+    @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.25;transform:scale(.55);}}
+    @keyframes wave-bar{0%,100%{transform:scaleY(1);}50%{transform:scaleY(0.2);}}
     .btn-pulse{animation:pulse-btn 2.2s ease-in-out infinite;}
-    .btn-row{display:flex;flex-direction:column;gap:12px;align-items:stretch;max-width:480px;margin:0 auto;}
+    .btn-row{display:flex;flex-direction:column;gap:12px;align-items:stretch;max-width:720px;margin:0 auto;}
     .btn-row .btn{width:100%;justify-content:center;}
 
     /* CTA DARK */
-    .cta-dark{background:#000;position:relative;overflow:hidden;padding:80px 16px;}
-    .cta-glow{position:absolute;bottom:-120px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(34,197,94,.15) 0%,transparent 65%);pointer-events:none;}
-    .cta-text{color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.8;margin-bottom:36px;text-align:left;}
+    .cta-dark{background:#000;position:relative;overflow:hidden;padding:100px 24px;}
+    .cta-glow{position:absolute;bottom:-120px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(circle,rgba(34,197,94,.15) 0%,transparent 65%);pointer-events:none;}
+    .cta-text{color:rgba(255,255,255,.7);font-size:1.05rem;line-height:1.85;margin-bottom:40px;text-align:left;}
     .cta-text strong{color:#fff;}
     .cta-text .green{color:#22c55e;}
 
     /* QUOTE */
-    .quote{border-left:4px solid #22c55e;padding:18px 22px;background:rgba(34,197,94,.07);border-radius:0 12px 12px 0;margin-top:32px;}
-    .quote p{color:#d1fae5;font-size:.9rem;line-height:1.75;margin:0;}
+    .quote{border-left:4px solid #22c55e;padding:22px 26px;background:rgba(34,197,94,.07);border-radius:0 12px 12px 0;margin-top:36px;}
+    .quote p{color:#d1fae5;font-size:1rem;line-height:1.8;margin:0;}
 
     /* FLOAT */
     .float-wa{position:fixed;bottom:24px;right:24px;z-index:9999;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:transform .2s,box-shadow .2s;text-decoration:none;}
@@ -139,17 +144,17 @@
 
     /* CREDIBILITY STRIP */
     .cred-strip{background:#f9fafb;border-bottom:1px solid #f0f0f0;padding:28px 16px;}
-    .cred-inner{max-width:480px;margin:0 auto;}
-    .cred-pill{display:flex;align-items:center;gap:9px;font-size:.82rem;color:#6b7280;}
+    .cred-inner{max-width:720px;margin:0 auto;}
+    .cred-pill{display:flex;align-items:center;gap:10px;font-size:.9rem;color:#6b7280;}
     .cred-pill-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;}
 
     /* FAQ */
     .faq-item{border-bottom:1px solid #f0f0f0;padding:18px 0;}
     .faq-item:first-child{border-top:1px solid #f0f0f0;}
-    .faq-q{font-weight:700;color:#111;font-size:.95rem;display:flex;justify-content:space-between;align-items:flex-start;cursor:pointer;gap:16px;user-select:none;}
+    .faq-q{font-weight:700;color:#111;font-size:1rem;display:flex;justify-content:space-between;align-items:flex-start;cursor:pointer;gap:16px;user-select:none;}
     .faq-q:hover{color:#15803d;}
-    .faq-icon{font-size:1.2rem;color:#9ca3af;flex-shrink:0;font-weight:400;line-height:1;margin-top:2px;transition:color .2s;}
-    .faq-a{font-size:.875rem;color:#6b7280;line-height:1.7;margin-top:12px;display:none;}
+    .faq-icon{font-size:1.3rem;color:#9ca3af;flex-shrink:0;font-weight:400;line-height:1;margin-top:2px;transition:color .2s;}
+    .faq-a{font-size:.95rem;color:#6b7280;line-height:1.75;margin-top:14px;display:none;}
     .faq-item.open .faq-a{display:block;}
     .faq-item.open .faq-icon{color:#22c55e;}
     .faq-item.open .faq-q{color:#15803d;}
@@ -159,10 +164,16 @@
     footer a{color:#6b7280;text-decoration:underline;font-size:.75rem;}
     footer a:hover{color:#9ca3af;}
 
+    @media(min-width:640px){
+      .card-grid{grid-template-columns:1fr 1fr;}
+      .card-grid-2{grid-template-columns:1fr 1fr;}
+      .check-grid{grid-template-columns:1fr 1fr;}
+    }
     @media(max-width:640px){
-      .hero-title{letter-spacing:-.02em;}
+      .hero-title{font-size:clamp(1.4rem,5vw,1.8rem);letter-spacing:-.02em;}
       .stat-cell{padding:20px 8px;}
       .stat-lbl{font-size:.65rem;}
+      .sec{padding:52px 16px;}
     }
   </style>
 </head>
@@ -186,7 +197,8 @@
 <!-- HERO -->
 <section class="hero-bg">
   <div class="hero-glow"></div>
-  <div style="position:relative;z-index:1;max-width:480px;margin:0 auto;text-align:center;">
+  <div class="hero-inner">
+    <div class="hero-text">
 
     <p data-fade style="font-size:.68rem;color:#4ade80;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px;">Brasil · Europa · Estados Unidos</p>
 
@@ -198,59 +210,160 @@
       Mentoria individual. Você trabalha diretamente comigo — sem gravação, sem turma, sem intermediário. O sistema que uso para faturar todos os dias em reais <strong style="color:rgba(255,255,255,.9);">e em euro/dólar.</strong>
     </p>
 
-    <div class="btn-row" data-fade data-delay="3" style="margin-bottom:52px;">
+    <div class="btn-row" data-fade data-delay="3">
       <a href="https://wa.me/5588999471567" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-pulse">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Quero me aplicar agora
       </a>
       <a href="#para-quem" class="btn btn-outline">Ver como funciona ↓</a>
     </div>
+    </div>
 
-    <div data-fade data-delay="4" style="max-width:480px;margin:0 auto;">
-      <div style="border-radius:14px;overflow:hidden;border:1px solid #1a2a1a;box-shadow:0 24px 80px rgba(0,0,0,.8);">
-        <div style="background:#111;padding:10px 14px;display:flex;align-items:center;gap:6px;border-bottom:1px solid #1a1a1a;">
+    <div class="hero-mockup" data-fade data-delay="4">
+      <div style="border-radius:20px;overflow:hidden;border:1px solid #1f3f1f;box-shadow:0 0 0 1px #0c1f0c,0 0 60px rgba(34,197,94,.1),0 32px 100px rgba(0,0,0,.95);">
+
+        <!-- titlebar -->
+        <div style="background:#0d0d0d;padding:10px 16px;display:flex;align-items:center;gap:6px;border-bottom:1px solid #141414;">
           <span style="width:9px;height:9px;border-radius:50%;background:#ff5f57;display:block;flex-shrink:0;"></span>
           <span style="width:9px;height:9px;border-radius:50%;background:#febc2e;display:block;flex-shrink:0;"></span>
           <span style="width:9px;height:9px;border-radius:50%;background:#28c840;display:block;flex-shrink:0;"></span>
-          <span style="flex:1;background:#1c1c1c;height:14px;border-radius:20px;margin-left:6px;max-width:140px;"></span>
+          <div style="flex:1;display:flex;align-items:center;justify-content:flex-end;gap:5px;">
+            <span style="width:5px;height:5px;border-radius:50%;background:#22c55e;display:block;animation:pulse-dot 1.4s ease-in-out infinite;"></span>
+            <span style="font-size:8px;color:#555;font-family:sans-serif;letter-spacing:.04em;">Mentoria 1:1 · Cadu Bezerra</span>
+          </div>
         </div>
-        <div style="background:#0a0a0a;display:flex;height:240px;">
-          <div style="width:100px;border-right:1px solid #111;padding:12px 8px;display:flex;flex-direction:column;gap:5px;background:#0d0d0d;flex-shrink:0;">
-            <div style="height:24px;background:#22c55e;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:8px;color:#000;font-weight:800;font-family:sans-serif;">Dashboard</div>
-            <div style="height:20px;background:#141414;border-radius:5px;"></div>
-            <div style="height:20px;background:#141414;border-radius:5px;"></div>
-            <div style="height:20px;background:#141414;border-radius:5px;"></div>
-            <div style="height:20px;background:#141414;border-radius:5px;"></div>
+
+        <!-- body -->
+        <div style="background:#080808;padding:14px;display:flex;flex-direction:column;gap:10px;">
+
+          <!-- CALL CARD -->
+          <div style="background:linear-gradient(140deg,#0c1c0c 0%,#080d08 100%);border:1px solid #1e3a1e;border-radius:16px;padding:14px 16px;position:relative;overflow:hidden;">
+            <!-- ambient glow -->
+            <div style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:#22c55e;border-radius:50%;filter:blur(55px);opacity:.11;pointer-events:none;"></div>
+
+            <!-- top row -->
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+              <span style="font-size:7px;color:#3d6b3d;font-family:sans-serif;letter-spacing:.1em;text-transform:uppercase;font-weight:700;">Call em andamento</span>
+              <div style="display:flex;align-items:center;gap:4px;background:#020802;border:1px solid #22c55e;border-radius:20px;padding:3px 9px;">
+                <span style="width:5px;height:5px;border-radius:50%;background:#22c55e;display:block;animation:pulse-dot 1.1s ease-in-out infinite;"></span>
+                <span style="font-size:6.5px;color:#22c55e;font-weight:800;font-family:sans-serif;letter-spacing:.06em;">AO VIVO</span>
+              </div>
+            </div>
+
+            <!-- avatars + connector -->
+            <div style="display:flex;align-items:center;gap:0;margin-bottom:14px;">
+              <!-- Cadu -->
+              <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;">
+                <div style="width:42px;height:42px;border-radius:50%;background:#22c55e;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:#000;font-family:sans-serif;box-shadow:0 0 18px rgba(34,197,94,.4);">C</div>
+                <span style="font-size:6.5px;color:#6aaa6a;font-family:sans-serif;">Cadu</span>
+              </div>
+              <!-- waveform connector -->
+              <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:2.5px;padding:0 10px;">
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:5px; animation:wave-bar 1.1s ease-in-out infinite;animation-delay:0s;transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:14px;animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.08s;transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:8px; animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.16s;transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:20px;animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.24s;transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:10px;animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.32s;transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:24px;animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.4s; transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:14px;animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.48s;transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:6px; animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.56s;transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:18px;animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.64s;transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:9px; animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.72s;transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:22px;animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.8s; transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:12px;animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.88s;transform-origin:bottom;"></div>
+                <div style="width:2px;background:#22c55e;border-radius:2px;height:7px; animation:wave-bar 1.1s ease-in-out infinite;animation-delay:.96s;transform-origin:bottom;"></div>
+              </div>
+              <!-- Mentorado -->
+              <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0;">
+                <div style="position:relative;">
+                  <div style="width:42px;height:42px;border-radius:50%;background:#0d1a0d;border:1.5px solid #22c55e44;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#22c55e;font-family:sans-serif;">J</div>
+                </div>
+                <span style="font-size:6.5px;color:#aaa;font-family:sans-serif;font-weight:700;">João S.</span>
+                <span style="font-size:5.5px;color:#22c55e;font-family:sans-serif;letter-spacing:.08em;text-transform:uppercase;opacity:.7;">mentorado</span>
+              </div>
+            </div>
+
+            <!-- info row -->
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:7px;color:#6aaa6a;font-family:sans-serif;letter-spacing:.02em;">Estratégia de escala global</span>
+              <span id="call-timer" style="font-size:9px;color:#6aaa6a;font-family:monospace;letter-spacing:.05em;font-weight:700;">47:23</span>
+            </div>
           </div>
-          <div style="flex:1;padding:12px;display:flex;flex-direction:column;gap:9px;overflow:hidden;min-width:0;">
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;">
-              <div style="background:#111;border:1px solid #1a2a1a;border-radius:7px;padding:7px 5px;text-align:center;">
-                <div style="color:#22c55e;font-weight:900;font-size:11px;line-height:1;font-family:sans-serif;">R$100K</div>
-                <div style="color:#444;font-size:7px;margin-top:3px;font-family:sans-serif;">por mês</div>
-              </div>
-              <div style="background:#111;border:1px solid #1a2a1a;border-radius:7px;padding:7px 5px;text-align:center;">
-                <div style="color:#22c55e;font-weight:900;font-size:11px;line-height:1;font-family:sans-serif;">€ + $</div>
-                <div style="color:#444;font-size:7px;margin-top:3px;font-family:sans-serif;">Global</div>
-              </div>
-              <div style="background:#111;border:1px solid #1a2a1a;border-radius:7px;padding:7px 5px;text-align:center;">
-                <div style="color:#22c55e;font-weight:900;font-size:11px;line-height:1;font-family:sans-serif;">30d</div>
-                <div style="color:#444;font-size:7px;margin-top:3px;font-family:sans-serif;">setup</div>
+
+          <!-- WHATSAPP CARD — inbox 3 conversas -->
+          <div style="background:#0e0e0e;border:1px solid #1a1a1a;border-radius:16px;overflow:hidden;">
+            <!-- WA header -->
+            <div style="background:#0a170a;padding:8px 12px;display:flex;align-items:center;gap:7px;border-bottom:1px solid #111f11;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#25D366" style="flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span style="font-size:8px;color:#25D366;font-weight:700;font-family:sans-serif;">WhatsApp</span>
+              <span style="font-size:7px;color:#6aaa6a;font-family:sans-serif;margin-left:auto;font-weight:600;">Mentorados</span>
+            </div>
+
+            <!-- conversa 1 — João -->
+            <div style="padding:9px 12px;display:flex;align-items:center;gap:9px;border-bottom:1px solid #131313;">
+              <div style="width:30px;height:30px;border-radius:50%;background:#1a3320;border:1px solid #22c55e33;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#22c55e;font-family:sans-serif;flex-shrink:0;">J</div>
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;">
+                  <span style="font-size:8.5px;color:#e5e5e5;font-weight:700;font-family:sans-serif;">João S.</span>
+                  <span style="font-size:6.5px;color:#3a5a3a;font-family:sans-serif;">14:32</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:4px;margin-bottom:4px;">
+                  <svg width="12" height="7" viewBox="0 0 14 8" fill="none" style="flex-shrink:0;"><path d="M1 4l2.5 2.5L9 1" stroke="#25D366" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 4l2.5 2.5L13 1" stroke="#25D366" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span style="font-size:7.5px;color:#555;font-family:sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">aquela copy nova que você ajustou tá convertendo diferente</span>
+                </div>
+                <div style="display:flex;gap:4px;">
+                  <span style="font-size:6px;font-weight:800;color:#22c55e;background:#0c1f0c;border:1px solid #22c55e33;border-radius:20px;padding:2px 7px;font-family:sans-serif;letter-spacing:.04em;">ROI 2.7x</span>
+                  <span style="font-size:6px;font-weight:700;color:#6aaa6a;background:#0c1a0c;border:1px solid #2a4a2a;border-radius:20px;padding:2px 7px;font-family:sans-serif;">copy ads</span>
+                </div>
               </div>
             </div>
-            <div style="background:#111;border:1px solid #1a2a1a;border-radius:7px;padding:9px;flex:1;">
-              <div style="color:#555;font-size:7px;margin-bottom:5px;font-family:sans-serif;">Faturamento mensal</div>
-              <svg viewBox="0 0 180 46" style="width:100%;height:46px;display:block;" preserveAspectRatio="none">
-                <defs><linearGradient id="cg" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#22c55e" stop-opacity=".35"/><stop offset="100%" stop-color="#22c55e" stop-opacity="0"/></linearGradient></defs>
-                <polygon points="0,44 25,40 50,34 75,26 100,18 125,12 150,7 175,3 180,2 180,46 0,46" fill="url(#cg)"/>
-                <polyline points="0,44 25,40 50,34 75,26 100,18 125,12 150,7 175,3 180,2" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
-              </svg>
+
+            <!-- conversa 2 — Rafael -->
+            <div style="padding:9px 12px;display:flex;align-items:center;gap:9px;border-bottom:1px solid #131313;">
+              <div style="width:30px;height:30px;border-radius:50%;background:#1a2030;border:1px solid #22c55e22;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#7dd3fc;font-family:sans-serif;flex-shrink:0;">R</div>
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;">
+                  <span style="font-size:8.5px;color:#e5e5e5;font-weight:700;font-family:sans-serif;">Rafael M.</span>
+                  <span style="font-size:6.5px;color:#3a5a3a;font-family:sans-serif;">11:08</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:4px;margin-bottom:4px;">
+                  <svg width="12" height="7" viewBox="0 0 14 8" fill="none" style="flex-shrink:0;"><path d="M1 4l2.5 2.5L9 1" stroke="#25D366" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 4l2.5 2.5L13 1" stroke="#25D366" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span style="font-size:7.5px;color:#555;font-family:sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">bom dia!! primeira venda fora do país confirmada essa semana</span>
+                </div>
+                <div style="display:flex;gap:4px;">
+                  <span style="font-size:6px;font-weight:800;color:#22c55e;background:#0c1f0c;border:1px solid #22c55e33;border-radius:20px;padding:2px 7px;font-family:sans-serif;letter-spacing:.04em;">+ na 1ª semana</span>
+                  <span style="font-size:6px;font-weight:700;color:#6aaa6a;background:#0c1a0c;border:1px solid #2a4a2a;border-radius:20px;padding:2px 7px;font-family:sans-serif;">mercado global</span>
+                </div>
+              </div>
             </div>
-            <div style="display:flex;gap:5px;">
-              <div style="background:#22c55e;border-radius:5px;padding:4px 8px;font-size:7px;color:#000;font-weight:800;font-family:sans-serif;white-space:nowrap;">Call 1:1 ✓</div>
-              <div style="background:#22c55e;border-radius:5px;padding:4px 8px;font-size:7px;color:#000;font-weight:800;font-family:sans-serif;white-space:nowrap;">Implementação ✓</div>
-              <div style="background:#1a2a1a;border:1px solid #22c55e;border-radius:5px;padding:4px 8px;font-size:7px;color:#22c55e;font-weight:700;font-family:sans-serif;white-space:nowrap;">Escala →</div>
+
+            <!-- conversa 3 — Ana -->
+            <div style="padding:9px 12px;display:flex;align-items:center;gap:9px;">
+              <div style="width:30px;height:30px;border-radius:50%;background:#2a1a30;border:1px solid #22c55e22;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#c084fc;font-family:sans-serif;flex-shrink:0;">A</div>
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;">
+                  <span style="font-size:8.5px;color:#e5e5e5;font-weight:700;font-family:sans-serif;">Ana C.</span>
+                  <span style="font-size:6.5px;color:#3a5a3a;font-family:sans-serif;">09:55</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:4px;margin-bottom:4px;">
+                  <svg width="12" height="7" viewBox="0 0 14 8" fill="none" style="flex-shrink:0;"><path d="M1 4l2.5 2.5L9 1" stroke="#25D366" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 4l2.5 2.5L13 1" stroke="#25D366" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span style="font-size:7.5px;color:#555;font-family:sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">implementei o funil completo. esse mês foi bem melhor</span>
+                </div>
+                <div style="display:flex;gap:4px;">
+                  <span style="font-size:6px;font-weight:800;color:#22c55e;background:#0c1f0c;border:1px solid #22c55e33;border-radius:20px;padding:2px 7px;font-family:sans-serif;letter-spacing:.04em;">ROI 3.2x</span>
+                  <span style="font-size:6px;font-weight:700;color:#6aaa6a;background:#0c1a0c;border:1px solid #2a4a2a;border-radius:20px;padding:2px 7px;font-family:sans-serif;">funil completo</span>
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- TAGS -->
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <div style="background:#22c55e;border-radius:20px;padding:5px 11px;font-size:7px;color:#000;font-weight:800;font-family:sans-serif;white-space:nowrap;">WA direto ✓</div>
+            <div style="background:#22c55e;border-radius:20px;padding:5px 11px;font-size:7px;color:#000;font-weight:800;font-family:sans-serif;white-space:nowrap;">Sem turma ✓</div>
+            <div style="background:#0d1a0d;border:1px solid #22c55e44;border-radius:20px;padding:5px 11px;font-size:7px;color:#22c55e;font-weight:700;font-family:sans-serif;white-space:nowrap;">Só você 1:1 →</div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -682,9 +795,9 @@
 <!-- CTA FINAL -->
 <section class="cta-dark">
   <div class="cta-glow"></div>
-  <div style="position:relative;z-index:1;max-width:480px;margin:0 auto;text-align:center;">
+  <div style="position:relative;z-index:1;max-width:720px;margin:0 auto;text-align:center;">
 
-    <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;line-height:1.12;letter-spacing:-.03em;margin:18px 0 24px;" data-fade data-delay="1">
+    <h2 style="font-size:clamp(2rem,4.5vw,3.4rem);font-weight:900;color:#fff;line-height:1.08;letter-spacing:-.03em;margin:18px 0 28px;" data-fade data-delay="1">
       A decisão é sua.<br/><span style="color:#22c55e;">Mas o momento é agora.</span>
     </h2>
 
@@ -696,7 +809,7 @@
     </div>
 
     <div data-fade data-delay="3">
-      <a href="https://wa.me/5588999471567" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-green-lg btn-pulse" style="width:100%;display:flex;max-width:480px;">
+      <a href="https://wa.me/5588999471567" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-green-lg btn-pulse" style="width:100%;display:flex;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Quero conversar — Falar no WhatsApp
       </a>
@@ -708,23 +821,25 @@
 
 <!-- PS -->
 <section style="padding:36px 16px;background:#fff;">
-  <div style="max-width:480px;margin:0 auto;" data-fade>
-    <h3 style="font-size:1.15rem;font-weight:800;margin-bottom:10px;color:#111;">P.S:</h3>
+  <div style="max-width:720px;margin:0 auto;" data-fade>
+    <h3 style="font-size:1.25rem;font-weight:800;margin-bottom:12px;color:#111;">P.S:</h3>
     <p style="color:#9ca3af;font-size:.875rem;line-height:1.7;">Essa conversa é o primeiro filtro. Não aceito todo mundo — e prefiro ser honesto antes de você chegar do que depois. Se o fit não existir, eu mesmo te digo. Mas se existir, a gente começa rápido.</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div style="max-width:480px;margin:0 auto;text-align:center;">
+  <div style="max-width:720px;margin:0 auto;text-align:center;">
     <img src="images/design-mode/logo.png" alt="Logo" style="width:38px;height:38px;object-fit:contain;margin:0 auto 14px;display:block;opacity:.5;"/>
     <p style="font-size:.78rem;margin-bottom:14px;">Cadu Bezerra | Copyright ©2025 | Todos os direitos reservados</p>
     <p style="font-size:.7rem;line-height:1.7;margin-bottom:10px;max-width:560px;margin-left:auto;margin-right:auto;">Este site não faz parte do site do Facebook nem do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de forma alguma. FACEBOOK é uma marca registrada da FACEBOOK, Inc.</p>
     <p style="font-size:.7rem;line-height:1.7;margin-bottom:20px;max-width:560px;margin-left:auto;margin-right:auto;">Os resultados que você vê são os resultados de clientes específicos. Não garantimos que você receberá resultados específicos. Garantimos apenas que forneceremos nossas ferramentas para ajudar a melhorar o desempenho dos seus anúncios ou seu dinheiro de volta.</p>
     <div style="border-top:1px solid #222;padding-top:14px;">
-      <a href="/privacidade.html" rel="noopener">Política de Privacidade</a>
+      <a href="privacidade.html" rel="noopener">Política de Privacidade</a>
       <span style="color:#333;margin:0 10px;">—</span>
-      <a href="/termos.html" rel="noopener">Termos e Condições</a>
+      <a href="termos.html" rel="noopener">Termos e Condições</a>
+      <span style="color:#333;margin:0 10px;">—</span>
+      <a href="disclaimer.html" rel="noopener">Aviso Legal</a>
     </div>
   </div>
 </footer>
@@ -748,6 +863,18 @@
     });
   });
 
+  // live call timer — counts up from 47:23
+  (function(){
+    var el = document.getElementById('call-timer');
+    if(!el) return;
+    var total = 47*60+23;
+    setInterval(function(){
+      total++;
+      var m = Math.floor(total/60), s = total%60;
+      el.textContent = (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+    }, 1000);
+  })();
+
   // FAQ toggle — no inline onclick, wired here
   function toggleFaq(el) {
     const item = el.closest('.faq-item');
@@ -766,7 +893,50 @@
   document.querySelectorAll('.faq-q').forEach(el => {
     el.addEventListener('click', () => toggleFaq(el));
   });
+
+  // Cookie consent — LGPD (DOMContentLoaded so cookie-bar div is available)
+  document.addEventListener('DOMContentLoaded', function(){
+    var KEY = 'cc_v1';
+    function loadTrackers(){
+      window.pixelId = "68c61f6ea983bb67b8e00765";
+      var px = document.createElement('script');
+      px.async = true; px.src = 'https://cdn.utmify.com.br/scripts/pixel/pixel.js';
+      document.head.appendChild(px);
+      var ut = document.createElement('script');
+      ut.async = true; ut.src = 'https://cdn.utmify.com.br/scripts/utms/latest.js';
+      ut.setAttribute('data-utmify-prevent-xcod-sck','true');
+      ut.setAttribute('data-utmify-prevent-subids','true');
+      document.head.appendChild(ut);
+    }
+    var saved = localStorage.getItem(KEY);
+    if(saved === 'all') { loadTrackers(); return; }
+    if(saved !== null) return;
+    var bar = document.getElementById('cookie-bar');
+    if(bar) bar.style.display = 'flex';
+    document.getElementById('cookie-accept').addEventListener('click', function(){
+      localStorage.setItem(KEY, 'all');
+      bar.style.display = 'none';
+      loadTrackers();
+    });
+    document.getElementById('cookie-essential').addEventListener('click', function(){
+      localStorage.setItem(KEY, 'essential');
+      bar.style.display = 'none';
+    });
+  });
 </script>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-bar" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#0d0d0d;border-top:1px solid #1c1c1c;padding:14px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.6);">
+  <div style="max-width:720px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:200px;">
+      <p style="font-size:.8rem;color:#d1d5db;line-height:1.55;margin:0;">Usamos cookies essenciais e de marketing (Meta Pixel, UTMify) para análise de tráfego e anúncios. Ao aceitar, você concorda com nossa <a href="privacidade.html" style="color:#22c55e;text-decoration:underline;">Política de Privacidade</a>.</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap;">
+      <button id="cookie-accept" style="background:#22c55e;color:#000;border:none;border-radius:8px;padding:9px 20px;font-size:.8rem;font-weight:800;cursor:pointer;font-family:inherit;white-space:nowrap;">Aceitar tudo</button>
+      <button id="cookie-essential" style="background:transparent;color:#6b7280;border:1px solid #2a2a2a;border-radius:8px;padding:9px 18px;font-size:.8rem;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap;">Só essenciais</button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

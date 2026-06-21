@@ -79,3 +79,5 @@ URLs locais:
 | [SECURITY.md](./SECURITY.md) | Rate limit, CSP, LGPD, auth, honeypot |
 | [DEPLOY.md](./DEPLOY.md) | Railway setup, env vars, CI/CD, domínio |
 | [ENV.md](./ENV.md) | `.env.example` completo, regras, como gerar secrets |
+| [TESTING.md](./TESTING.md) | Vitest unit + integração + Playwright E2E, CI GitHub Actions |
+| [MONITORING.md](./MONITORING.md) | Sentry, Railway Logs, UptimeRobot, runbook de incidentes |
